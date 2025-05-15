@@ -1,0 +1,140 @@
+.header {
+  border-bottom: solid 1px var(--light-border-color);
+}
+.header a {
+  color: #000;
+  text-decoration: none;
+}
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+}
+.logo h1 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 0;
+}
+.nav a {
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.nav a.active {
+  font-weight: 600;
+  color: var(--font-blue-color);
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.userIcon {
+  width: 50px;
+  height: 50px;
+}
+.bell {
+  width: 40px;
+  height: 40px;
+}
+.menu {
+  position: relative;
+}
+.menuButton {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid var(--light-border-color);
+  border-radius: 8px;
+  box-shadow: var(--lite-shadow);
+  padding: 10px 0;
+  margin: 5px 0 0 0;
+  z-index: 10;
+  min-width: 230px;
+}
+.menuItem {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.25s background-color ease;
+}
+
+.menuItem:hover {
+  background-color: var(--light-hover-color);
+}
+.menuItem_danger {
+  color: var(--danger-color);
+}
+.userData h2 {
+  font-weight: 500;
+  font-size: 18px;
+}
+.userData p {
+  color: var(--font-secondary-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  text-align: right;
+}
+
+@media (max-width: 870px) {
+  .nav {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .logo h1 {
+    font-size: 16px;
+  }
+  .userData h2 {
+    font-size: 14px;
+  }
+  .userData p {
+    font-size: 12px;
+  }
+  .userData {
+    width: 40px;
+  }
+  .bell {
+    display: none;
+  }
+}
+@media (max-width: 320px) {
+  .menuButton {
+    gap: 5px;
+  }
+}
